@@ -14,14 +14,14 @@ export default function Model() {
                         return <Mesh data={mesh} key={i}/>
                     })
                 }
-                <Text />
+                <Font />
                 <Background />
             </group>
     )
 }
 
-function Text() {
-    const font = '/fonts/PPNeueMontreal-Bold.otf'
+function Font() {
+    const src = '/fonts/PPNeueMontreal-Bold.otf'
     const textOption = {
         color: "white",
         anchorX: "center",
@@ -29,10 +29,10 @@ function Text() {
     }
     return (
         <group>
-            <Text font={font} position={[0, 0, -.1]} fontSize={0.75} {...textOption}>
+            <Text font={src} position={[0, 0, -.1]} fontSize={0.75} {...textOption}>
             404
             </Text>
-            <Text font={font} position={[0, -.275, -.1]} fontSize={0.04} {...textOption}>
+            <Text font={src} position={[0, -.275, -.1]} fontSize={0.04} {...textOption}>
             The link is broken
             </Text>
         </group>
