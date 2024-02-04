@@ -51,12 +51,13 @@ function Background() {
 function Mesh({data}) {
 
     const materialProps = useControls({
-        thickness: { value: 0.14, min: 0, max: 20, step: 0.01 },
+        thickness: { value: 0.275, min: 0, max: 20, step: 0.01 },
         roughness: { value: 0, min: 0, max: 1, step: 0.1 },
         transmission: {value: 0.99, min: 0, max: 1, step: 0.01},
-        ior: { value: 1.5, min: 0, max: 3, step: 0.1 },
+        ior: { value: 1.8, min: 0, max: 3, step: 0.1 },
         chromaticAberration: { value: 0.75, min: 0, max: 1},
-        backside: { value: false}
+        backside: { value: false},
+        interactive: {value: false}
     })
 
     return (
