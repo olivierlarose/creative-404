@@ -56,13 +56,12 @@ function Mesh({data}) {
         transmission: {value: 0.99, min: 0, max: 1, step: 0.01},
         ior: { value: 1.8, min: 0, max: 3, step: 0.1 },
         chromaticAberration: { value: 0.75, min: 0, max: 1},
-        backside: { value: false},
-        interactive: {value: false}
+        resolution: {value: 300},
     })
 
     return (
         <Float>
-            <mesh {...data} receiveShadow={true} castShadow={true}>
+            <mesh {...data}>
                 <MeshTransmissionMaterial {...materialProps}/>
             </mesh>
         </Float>
