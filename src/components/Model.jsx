@@ -2,7 +2,6 @@ import { useGLTF, Text, Float, MeshTransmissionMaterial } from '@react-three/dre
 import React from 'react'
 import { useThree } from '@react-three/fiber'
 import { useControls } from 'leva'
-import { MeshBasicMaterial } from 'three'
 
 export default function Model() {
     const { viewport } = useThree()
