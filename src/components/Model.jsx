@@ -2,6 +2,7 @@ import { useGLTF, Text, Float, MeshTransmissionMaterial } from '@react-three/dre
 import React from 'react'
 import { useThree } from '@react-three/fiber'
 import { useControls } from 'leva'
+import { MeshBasicMaterial } from 'three'
 
 export default function Model() {
     const { viewport } = useThree()
@@ -15,7 +16,6 @@ export default function Model() {
                     })
                 }
                 <Font />
-                <Background />
             </group>
     )
 }
@@ -36,15 +36,6 @@ function Font() {
             The link is broken
             </Text>
         </group>
-    )
-}
-
-function Background() {
-    return (
-        <mesh position={[0, .05, -1]}>
-            <planeGeometry args={[3, 3, 20, 20]}/>
-            <meshStandardMaterial color="black"/>
-        </mesh>
     )
 }
 
